@@ -300,6 +300,10 @@
   margin: 16px 0;
 }
 
+.hero-title-highlight {
+  color: var(--ff-gold);
+}
+
 .hero-subtitle {
   color: var(--ff-muted);
   max-width: 34rem;

@@ -5,7 +5,9 @@ const Hero = () => {
     <section className="hero reveal">
       <div className="hero-content">
         <p className="pill">Solana native • Community owned</p>
-        <h1>Financial freedom is earned, not given.</h1>
+        <h1>
+          <span className="hero-title-highlight">Financial Freedom</span> is earned, not given.
+        </h1>
         <p className="hero-subtitle">
           Financial Freedom is a Solana-born community for people who know they were
           meant for more than working, worrying, and hoping it all works out. We share
