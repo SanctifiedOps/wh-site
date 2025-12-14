@@ -31,6 +31,8 @@ body,
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) rgba(255, 255, 255, 0.08);
 }
 
 body {
@@ -107,6 +109,33 @@ body::after {
   z-index: -1;
   pointer-events: none;
   animation: particleDrift 28s ease-in-out infinite alternate;
+}
+
+/* Custom scrollbar */
+* {
+  scrollbar-color: var(--red) rgba(255, 255, 255, 0.06);
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--red), var(--red-soft));
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.05);
 }
 
 @media (max-width: 640px) {

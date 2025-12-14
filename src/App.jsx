@@ -10,7 +10,7 @@ const bonkUrl = "https://bonk.fun/token/HpBW3bnSQx9ywe8ZbPQtgeFxPoxFPXBNwy9rNXRL
 const aboutCopy = {
   title: "From the Desk of the Meme House",
   body: [
-    "WHITEHOUSE exists for people who believe culture moves markets, and that memes are no longer background noise. They are the signal. On Solana, speed matters, visibility matters, and showing up in public matters. This office was formed to represent that reality, not dress it up.",
+    "WHITEHOUSE exists for people who believe culture moves markets, and that memes are no longer background noise. They ARE the culture. On Solana, speed matters, visibility matters, and showing up in public matters. This office was formed to represent that reality, not dress it up.",
     "We operate as the meme wing of Solana. The timeline is our briefing room, the replies are our town hall, and every post is an announcement made in full view. There are no closed doors here. What resonates travels. What doesn't gets left behind. That is how culture has always worked.",
     "This is not about being early, and it is not about being promised anything. It is about participation. Holding $WHITEHOUSE means you're part of the room when it happens. You're watching it form, reacting in real time, and pushing it forward with the rest of the country.",
     "Every holder is part of the cabinet, whether they planned to be or not. Executive orders take the shape of memes. Policy is set by attention. Momentum is built collectively, on-chain, with receipts. We're here to laugh, to move fast, and to remind everyone that this space belongs to the people who show up.",
@@ -62,7 +62,7 @@ const missionPillars = [
   {
     title: "Inform",
     body:
-      "Surface the signal first. We publish in public, share receipts, and keep the country updated on what matters on Solana."
+      "We publish in public, share receipts, and keep the country updated on what matters on Solana."
   },
   {
     title: "Inspire",
@@ -80,7 +80,7 @@ const buySteps = [
   {
     step: "Step 1",
     title: "Fund your wallet",
-    body: "Load up a Solana wallet (Phantom, Backpack, or your pick) so you're ready to move when the briefing drops."
+    body: "Load up a Solana wallet (Phantom, Solflare, or your pick) so you're ready to move when the briefing drops."
   },
   {
     step: "Step 2",
@@ -200,7 +200,7 @@ export default function App() {
         </button>
         <div className={`nav-drawer ${menuOpen ? "open" : ""}`}>
           <nav className="nav">
-            <a href="#hero" onClick={() => setMenuOpen(false)}>
+            <a href="#about" onClick={() => setMenuOpen(false)}>
               About
             </a>
             <a href="#mission" onClick={() => setMenuOpen(false)}>
@@ -232,7 +232,7 @@ export default function App() {
                 <span className="pill filled">Solana Native</span>
                 <span className="pill outline">Community Owned</span>
               </div>
-              <h1>This is an official {ticker} communication.</h1>
+              <h1>This is an Official {ticker} Communication</h1>
               <p className="lede">
                 We treat the timeline like a briefing room, release statements as memes, and let the public decide what
                 carries weight.
@@ -258,6 +258,16 @@ export default function App() {
           </div>
         </section>
 
+        <section className="about-section" id="about">
+          <div className="section-tag">About</div>
+          <h2>{aboutCopy.title}</h2>
+          <div className="about-body">
+            {aboutCopy.body.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
+        </section>
+
         <section className="mission-section" id="mission">
           <div className="section-tag">Mission</div>
           <h2>Inform, inspire, and lead the country.</h2>
@@ -271,16 +281,6 @@ export default function App() {
                 <p className="mission-title">{pillar.title}</p>
                 <p className="mission-body">{pillar.body}</p>
               </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="about-section" id="about">
-          <div className="section-tag">About</div>
-          <h2>{aboutCopy.title}</h2>
-          <div className="about-body">
-            {aboutCopy.body.map((p) => (
-              <p key={p}>{p}</p>
             ))}
           </div>
         </section>
